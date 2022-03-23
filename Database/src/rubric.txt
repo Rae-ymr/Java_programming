@@ -1,0 +1,40 @@
+Lab F Grading Rubric (10 marks)
+
+This is a group lab exercise.
+
+You may receive zero if:
+- Your code does not compile
+- No groups members are present for the live demonstration
+- If you are unable to connect to the database
+
+Demonstravtion tasks:
+***If your code is implemented correctly, the provided main will execute all of the demonstration tasks.
+***You must show your database state before and after the code is executed.
+
+1 mark: initializeConnection method must create a connection to the database, may not take in any arguments or return any values
+        Must throw an SQLException if connection cannot be made
+2 marks: Use selectAllNames method to return a list of competitiors and a list of teachers (two separate calls)
+         Must take in a String for the table name and return a String (mark deducted if incorrect)
+         -1 if the content of the competitors list is incorrect
+         -1 if the content of the teachers list is incorrect
+2 marks: Insert the given new competitor into the database
+         Six arguments that match the competitor table, no return value (mark deducted if incorrect)
+         Check to make sure the database has been updated with a new competitor
+1 mark: Insertion of the second given new competitor should fail and throw an IllegalArgumentException because the new student's teacher is not already registered in the database
+        Check to make sure the competitor was not added
+1 mark: Insertion of the third given new competitor should fail and throw an IllegalArgumentException because the new student is outside of the valid age range
+        Check to make sure the competitor was not added
+1 mark: Delete the specified competitor from the database
+        Must take in the competitor's id as a String, no return value (mark deducted if incorrect)
+        Check to make sure the competitor was deleted
+1 mark: Answer the following question in your demonstration:
+        What data conflicts might arise when we try to delete an existing teacher?
+1 mark: Must show where all Statement, ResultSet, and Connection objects are closed. This may be in the close method or elsewhere in the code.
+
+
+Tips:
+Remember that each time you execute the given .sql file, the database will be reset. 
+You should reset the database before each test run of your code.
+Use the following account information: Username = student, Password = ensf
+
+
